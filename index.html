@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage/Loan Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header, footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        .horizontal-bar {
+            height: 4px;
+            background-color: #0066cc;
+        }
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .sidebar {
+            background-color: #f0f0f0;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        main {
+            padding: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+        }
+         .content {
+            flex-grow: 1;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .ad-banner {
+            background-color: #e0e0e0;
+            padding: 1rem;
+            margin: 0.5rem;
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+        .calculator-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0.5rem;
+            flex: 1;
+            min-width: 200px;
+        }
+        .calculator-list h3 {
+            margin-top: 0;
+        }
+        .calculator-list li {
+            margin-bottom: 0.5rem;
+        }
+        .calculator-list a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .calculator-list a:hover {
+            text-decoration: underline;
+        }
+        .download-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            margin-top: 1rem;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                flex-direction: column;
+            }
+            .ad-banner, .calculator-list {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mortgage/Loan Calculator</h1>
+    </header>
+    
+    <div class="horizontal-bar"></div>
+    
+    <div class="content-wrapper">
+        <div class="sidebar">
+            <div class="ad-banner">
+
+				                <p>LANDING PAGE TUTORIAL</p>
+				                
+                <img src="lp.png" alt="Best Mortage Calculator Free">
+                <a href="#" class="download-button">Download Now</a>
+            </div>
+            <div class="ad-banner">
+                <img src="lpp.png" alt="Mortage Calculator with Extra payments">
+            </div>
+            <div class="calculator-list">
+                <h3>Other Calculators</h3>
+                <ul>
+                    <li><a href="#">Free IQ test</a></li>
+                    <li><a href="#">Classical intelligence test</a></li>
+                    <li><a href="#">Culture fair intelligence test</a></li>
+                    <li><a href="#">Assessment training</a></li>
+                    <li><a href="#">Numerical reasoning practice</a></li>
+                    <li><a href="#">Verbal reasoning practice</a></li>
+                    
+                </ul>
+            </div>
+			<div class="ad-banner">
+
+				                <h3>LANDING PAGE TUTORIAL</h3>
+				                
+                <img src="lp.png" alt="Landing Page Tutorial">
+                <a href="#" class="download-button">Downloa Now</a>
+            </div>
+        </div>
+        
+        <main>
+            <div class="content">
+			<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Mortgage/Loan Calculator</title>
+    <style>
+        /* Existing styles remain unchanged */
+		body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            font-size: 1em;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 12px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        button:hover {
+            background-color: #004d40;
+        }
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #4d3d3d;
+        }
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
+        .tab button:hover {
+            background-color: #ddd;
+        }
+        .tab button.active {
+            background-color: #ccc;
+        }
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+        /* New styles for better readability */
+        #results {
+            background-color: #e0f2f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        #results h3 {
+            color: #00796b;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #00796b;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Comprehensive Mortgage/Loan Calculator</h2>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'LoanDetails')">Loan Details</button>
+        <button class="tablinks" onclick="openTab(event, 'Taxes')">Taxes & Insurance</button>
+        <button class="tablinks" onclick="openTab(event, 'ExtraPayments')">Extra Payments</button>
+    </div>
+
+    <div id="LoanDetails" class="tabcontent">
+        <div class="input-group">
+            <label for="loanAmount">Loan Amount ($):</label>
+            <input type="number" id="loanAmount" value="0">
+        </div>
+
+        <div class="input-group">
+            <label for="downPayment">Down Payment ($) (Optional):</label>
+            <input type="number" id="downPayment" value="0">
+        </div>
+
+       <div class="input-group">
+            <label for="interestType">Interest Type:</label>
+            <select id="interestType">
+                <option value="fixed">Fixed Rate</option>
+                <option value="variable">Variable Rate</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="interestRate">Initial Interest Rate (%):</label>
+            <input type="number" step="0.01" id="interestRate" value="0">
+        </div>
+
+        <div class="input-group">
+            <label for="adjustmentPeriod">Rate Adjustment Period (years):</label>
+            <input type="number" id="adjustmentPeriod" value="0">
+        </div>
+
+        <div class="input-group">
+            <label for="capPerAdjustment">Cap Per Adjustment (%):</label>
+            <input type="number" step="0.01" id="capPerAdjustment" value="0">
+        </div>
+
+        <div class="input-group">
+            <label for="lifetimeCap">Lifetime Cap (%):</label>
+            <input type="number" step="0.01" id="lifetimeCap" value="0">
+        </div>
+
+        <div class="input-group">
+            <label for="loanTerm">Loan Term (Years):</label>
+            <input type="number" step="0.1" id="loanTerm" value="0">
+        </div>
+
+        <div class="input-group">
+            <label for="frequency">Payment Frequency:</label>
+            <select id="frequency">
+                <option value="12">Monthly</option>
+                <option value="26">Bi-weekly</option>
+                <option value="52">Weekly</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate">
+        </div>
+    </div>
+
+    <div id="Taxes" class="tabcontent">
+        <div class="input-group">
+            <label for="propertyTax">Annual Property Tax ($):</label>
+            <input type="number" id="propertyTax" value="0">
+        </div>
+
+        <div class="input-group">
+            <label for="homeInsurance">Annual Home Insurance ($):</label>
+            <input type="number" id="homeInsurance" value="0">
+        </div>
+
+        <div class="input-group">
+            <label for="pmiRate">PMI Rate (%):</label>
+            <input type="number" step="0.01" id="pmiRate" value="0">
+        </div>
+
+        <div class="input-group">
+            <label for="hoaFees">Monthly HOA Fees ($):</label>
+            <input type="number" id="hoaFees" value="0">
+        </div>
+
+        <div class="input-group">
+            <label for="otherCosts">Other Monthly Costs ($):</label>
+            <input type="number" id="otherCosts" value="0">
+        </div>
+    </div>
+
+    <div id="ExtraPayments" class="tabcontent">
+        <div class="input-group">
+            <label for="extraPaymentSchedule">Extra Payment Schedule (e.g., 5=10000,14=5000):</label>
+            <input type="text" id="extraPaymentSchedule" placeholder="month=amount,month=amount,...">
+        </div>
+        <div class="input-group">
+            <label for="recurringExtraPayment">Recurring Extra Payment ($):</label>
+            <input type="number" id="recurringExtraPayment" value="0">
+        </div>
+    </div>
+
+    <button onclick="calculateMortgage()">Calculate</button>
+
+    <div id="results"></div>
+
+    <table id="scheduleTable">
+        <thead>
+            <tr>
+                <th>S/N</th>
+                <th>Payment Date</th>
+                <th>Payment</th>
+                <th>Principal</th>
+                <th>Interest</th>
+                <th>Taxes & Insurance</th>
+                <th>Extra Payment</th>
+                <th>Beginning Balance</th>
+                <th>Ending Balance</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <button id="downloadBtn" class="download-btn" onclick="downloadCSV()">Download CSV</button>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+function calculateMortgage() {
+    // Get all input values
+    const loanAmount = parseFloat(document.getElementById("loanAmount").value);
+    const downPayment = parseFloat(document.getElementById("downPayment").value) || 0;
+    const actualLoanAmount = loanAmount - downPayment;
+    const interestType = document.getElementById("interestType").value;
+    let interestRate = parseFloat(document.getElementById("interestRate").value) / 100;
+    const adjustmentPeriod = parseInt(document.getElementById("adjustmentPeriod").value);
+    const capPerAdjustment = parseFloat(document.getElementById("capPerAdjustment").value) / 100;
+    const lifetimeCap = parseFloat(document.getElementById("lifetimeCap").value) / 100;
+    const loanTerm = parseFloat(document.getElementById("loanTerm").value);
+    const frequency = parseInt(document.getElementById("frequency").value);
+    const propertyTax = parseFloat(document.getElementById("propertyTax").value);
+    const homeInsurance = parseFloat(document.getElementById("homeInsurance").value);
+    const pmiRate = parseFloat(document.getElementById("pmiRate").value) / 100;
+    const hoaFees = parseFloat(document.getElementById("hoaFees").value);
+    const otherCosts = parseFloat(document.getElementById("otherCosts").value);
+    const extraPaymentSchedule = document.getElementById("extraPaymentSchedule").value;
+    const recurringExtraPayment = parseFloat(document.getElementById("recurringExtraPayment").value);
+    const startDate = new Date(document.getElementById("startDate").value);
+
+    // Parse extra payment schedule
+    const extraPayments = {};
+    extraPaymentSchedule.split(',').forEach(item => {
+        const [month, amount] = item.split('=');
+        extraPayments[parseInt(month)] = parseFloat(amount);
+    });
+
+    // Calculate number of payments
+    const paymentsPerYear = frequency;
+    const totalPayments = Math.ceil(loanTerm * paymentsPerYear);
+    
+    // Initialize variables
+    let balance = actualLoanAmount;
+    let totalInterest = 0;
+    let totalPrincipal = 0;
+    let totalExtra = 0;
+    let schedule = [];
+
+    // Calculate monthly equivalents
+    const monthlyPropertyTax = propertyTax / 12;
+    const monthlyHomeInsurance = homeInsurance / 12;
+    const monthlyHOA = hoaFees;
+    const monthlyOther = otherCosts;
+
+    // Calculate the regular payment (without extra payments)
+    const monthlyRate = interestRate / 12;
+    const regularPayment = actualLoanAmount * (monthlyRate * Math.pow(1 + monthlyRate, totalPayments)) / (Math.pow(1 + monthlyRate, totalPayments) - 1);
+
+    for (let payment = 1; payment <= totalPayments; payment++) {
+        // Adjust interest rate for variable rate loans
+        if (interestType === 'variable' && payment % (adjustmentPeriod * paymentsPerYear) === 0) {
+            interestRate = Math.min(interestRate + capPerAdjustment, interestRate + lifetimeCap);
+        }
+
+        // Calculate interest and principal for this payment
+        const monthlyRate = interestRate / 12;
+        let interest = balance * monthlyRate;
+        let principal = regularPayment - interest;
+
+        // Calculate PMI (if applicable)
+        let pmi = 0;
+        if (balance / loanAmount > 0.8) {
+            pmi = (balance * pmiRate) / 12;
+        }
+
+        // Calculate extra payment for this period
+        let extraPayment = extraPayments[payment] || 0;
+        extraPayment += recurringExtraPayment;
+
+        // Adjust principal payment with extra payment
+        principal += extraPayment;
+        totalExtra += extraPayment;
+
+        // Calculate beginning balance
+        const beginningBalance = balance;
+
+        // Update balance
+        balance -= principal;
+        if (balance < 0) {
+            principal += balance;
+            balance = 0;
+        }
+
+        // Update totals
+        totalInterest += interest;
+        totalPrincipal += principal;
+
+        // Calculate payment date
+        const paymentDate = new Date(startDate);
+        paymentDate.setMonth(paymentDate.getMonth() + payment - 1);
+
+        // Format payment date based on frequency
+        let formattedDate;
+        if (frequency === 12) {
+            formattedDate = paymentDate.toLocaleString('default', { month: 'short', year: 'numeric' });
+        } else {
+            formattedDate = paymentDate.toLocaleDateString();
+        }
+
+        // Add to schedule
+        schedule.push({
+            sn: payment,
+            paymentDate: formattedDate,
+            payment: regularPayment.toFixed(2),
+            principal: principal.toFixed(2),
+            interest: interest.toFixed(2),
+            taxesInsurance: (pmi + monthlyPropertyTax + monthlyHomeInsurance + monthlyHOA + monthlyOther).toFixed(2),
+            extraPayment: extraPayment.toFixed(2),
+            beginningBalance: beginningBalance.toFixed(2),
+            endingBalance: Math.max(balance, 0).toFixed(2)
+        });
+
+        // Break if loan is paid off
+        if (balance <= 0) break;
+    }
+
+    // Calculate total savings with extra payments
+    const totalPaymentsWithoutExtra = actualLoanAmount * (monthlyRate * Math.pow(1 + monthlyRate, totalPayments)) / (Math.pow(1 + monthlyRate, totalPayments) - 1) * totalPayments;
+    const totalSavings = totalPaymentsWithoutExtra - (totalPrincipal + totalInterest);
+
+    // Display results
+    const resultsDiv = document.getElementById("results");
+    resultsDiv.innerHTML = `
+        <h3>Loan Summary:</h3>
+        <p>Loan Amount: $${loanAmount.toFixed(2)}</p>
+        ${downPayment > 0 ? `<p>Down Payment: $${downPayment.toFixed(2)} (${(downPayment / loanAmount * 100).toFixed(2)}%)</p>` : ''}
+        <p>Actual Loan Amount: $${actualLoanAmount.toFixed(2)}</p>
+        <p>Regular Monthly Payment: $${regularPayment.toFixed(2)}</p>
+        <p>Total Payments: ${schedule.length}</p>
+        <p>Total Interest Paid: $${totalInterest.toFixed(2)}</p>
+        <p>Total Principal Paid: $${totalPrincipal.toFixed(2)}</p>
+        <p>Total Extra Payments: $${totalExtra.toFixed(2)}</p>
+        <p>Total Savings with Extra Payments: $${totalSavings.toFixed(2)}</p>
+        <p>Final Payment Date: ${schedule[schedule.length - 1].paymentDate}</p>
+    `;
+
+    // Populate schedule table
+    const tbody = document.querySelector("#scheduleTable tbody");
+    tbody.innerHTML = '';
+    schedule.forEach(payment => {
+        const row = `<tr>
+            <td>${payment.sn}</td>
+            <td>${payment.paymentDate}</td>
+            <td>$${payment.payment}</td>
+            <td>$${payment.principal}</td>
+            <td>$${payment.interest}</td>
+            <td>$${payment.taxesInsurance}</td>
+            <td>$${payment.extraPayment}</td>
+            <td>$${payment.beginningBalance}</td>
+            <td>$${payment.endingBalance}</td>
+        </tr>`;
+        tbody.insertAdjacentHTML('beforeend', row);
+    });
+}
+
+function downloadCSV() {
+    // Get the table element
+    const table = document.getElementById('scheduleTable');
+    
+    // Extract the headers
+    const headers = Array.from(table.querySelectorAll('th')).map(th => th.textContent);
+    
+    // Extract the data rows
+    const rows = Array.from(table.querySelectorAll('tbody tr')).map(row => 
+        Array.from(row.querySelectorAll('td')).map(td => td.textContent.replace('$', '').trim())
+    );
+    
+    // Combine headers and rows
+    const csvContent = [
+        headers.join(','),
+        ...rows.map(row => row.join(','))
+    ].join('\n');
+
+    // Create a Blob with the CSV content
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    
+    // Create a download link
+    const link = document.createElement("a");
+    if (link.download !== undefined) {
+        const url = URL.createObjectURL(blob);
+        link.setAttribute("href", url);
+        link.setAttribute("download", "mortgage_schedule.csv");
+        link.style.visibility = 'hidden';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+}
+
+// Open the Loan Details tab by default
+document.getElementById("LoanDetails").style.display = "block";
+</script>
+
+</body>
+</html>
+			
+			</div>
+        </main>
+        
+        <div class="sidebar">
+            <div class="ad-banner">
+
+				                <h3>LANDING PAGE TUTORIAL</h3>
+				                
+                <img src="lp.png" alt="Landing Page Tutorial">
+                <a href="#" class="download-button">Downloa Now</a>
+            </div>
+            <div class="ad-banner">
+                <img src="/api/placeholder/150/100" alt="Study Abroad Ad">
+            </div>
+            <div class="calculator-list">
+                <h3>Other Calculators</h3>
+                <ul>
+                    <li><a href="#">Free IQ test</a></li>
+                    <li><a href="#">Classical intelligence test</a></li>
+                    <li><a href="#">Culture fair intelligence test</a></li>
+                    <li><a href="#">Assessment training</a></li>
+                    <li><a href="#">Numerical reasoning practice</a></li>
+                    <li><a href="#">Verbal reasoning practice</a></li>
+                    
+                </ul>
+            </div>
+			<div class="ad-banner">
+
+				                <p>LANDING PAGE TUTORIAL</p>
+				                
+                <img src="lp.png" alt="Best Mortage Calculator Free">
+                <a href="#" class="download-button">Download Now</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="horizontal-bar"></div>
+    
+    <footer>
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
